@@ -10,6 +10,16 @@ body {
   box-sizing: border-box;
 }
 
+@keyframes background-animation {
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: bottom right;
+  }
+}
+
 body {
   background-image: url("../public/background.png");
+  animation: background-animation 120s linear infinite;
 }

@@ -1,24 +1,29 @@
 import Head from "next/head";
-import Button from "/components/shared/Button.js";
-import Header from "/components/shared/Header.js";
-import Title from "/components/index/Title.js";
+import { Header, Button } from "/components/shared/Button.js";
+import containers from "/styles/containers.module.scss";
 
-export default function Home() {
+export default function Login() {
   return (
     <div className="container">
       <Head>
-        <title>This vs That</title>
+        <title> Login - This Vs That</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <main>
-        <Title />
-        <Button>Create a ranking</Button>
+        <div className={containers.container}>
+          <h3>Login</h3>
+          <label> Username </label>
+          <input type="text" />
+          <label> Password </label>
+          <input type="password" />
+          <Button> Login </Button>
+        </div>
       </main>
 
       <style jsx>{`
         .container {
           min-height: 100vh;
+          padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -63,15 +68,6 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           text-align: center;
-        }
-
-        .login {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          padding: 10px 15px;
-          font-size: 1em !important;
-          border-radius: 10px;
         }
       `}</style>
 

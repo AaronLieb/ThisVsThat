@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
 
+$red: #ff7b7b;
+$blue: #78aeff;
+$gray: #e8e8e8;
+
 *,
 html,
 body {
@@ -11,15 +15,18 @@ body {
 }
 
 @keyframes background-animation {
-  from {
-    background-position: top left;
+  0% {
+    background-position: 0% 0%;
   }
-  to {
-    background-position: bottom right;
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }
 
 body {
   background-image: url("../public/background.png");
-  animation: background-animation 120s linear infinite;
+  animation: background-animation 240s linear infinite;
 }

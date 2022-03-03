@@ -1,13 +1,11 @@
+import { red, blue, gray } from "/styles/colors.js";
+
 export default function Button({ size = 30, color, children }) {
   return (
     <a className={color}>
       {children}
 
-      <style jsx>{`
-        $red: #ff7b7b;
-        $blue: #78aeff;
-        $gray: #e8e8e8;
-
+      {/* <style jsx>{`
         @mixin buttonHoverAndClick($baseColor) {
           background-color: $baseColor;
           box-shadow: 0px 6px 1px desaturate(darken($baseColor, 30%), 30%);
@@ -30,23 +28,20 @@ export default function Button({ size = 30, color, children }) {
           margin: 10px;
           text-align: center;
           justify-content: center;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
           user-select: none;
-          @include buttonHoverAndClick($gray);
+          @include buttonHoverAndClick(${gray});
         }
 
         .red {
           color: white !important;
-          @include buttonHoverAndClick($red);
+          @include buttonHoverAndClick(${red});
         }
 
         .blue {
           color: white !important;
-          @include buttonHoverAndClick($blue);
+          @include buttonHoverAndClick(${blue});
         }
-      `}</style>
+      `}</style> */}
     </a>
   );
 }

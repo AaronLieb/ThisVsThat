@@ -1,0 +1,21 @@
+.container_red {
+        background-color: #FF7B7B;
+        height: 556px;
+        width: 468px;
+        top: 358px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 20px 0px #00000040;
+
+    }
+
+.container_blue {
+        background-color: #78AEFF;
+        height: 556px;
+        width: 468px;
+        top: 358px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 20px 0px #00000040;
+
+    }
+
+

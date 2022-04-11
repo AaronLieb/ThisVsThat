@@ -1,20 +1,15 @@
 .title {
     text-align: center;
-    font-family: Poppins;
+    font-family: "Poppins";
     font-weight: 600;
     letter-spacing: 0em;
-
-    /* make dynamic? */
-    font-size: 64px;
-    line-height: 96px;
-    margin-top: 200px;
+    font-size: 4rem;
+    margin-top: 8rem;
 }
 
 .voting_boxes {
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
-
-    /* make dynamic? */
-    margin-top: 100px;
+    margin-top: 6.25rem;
 }

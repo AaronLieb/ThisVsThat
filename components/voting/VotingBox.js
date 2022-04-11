@@ -7,7 +7,9 @@ export default function VotingBox(props){
 
     return(
         <div className={color == 'red' ? classes.container_red : classes.container_blue}>
-            
+            <p className={classes.text}>
+                {props.text}
+            </p>
         </div>
     )
 }

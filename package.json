@@ -12,7 +12,6 @@
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
-    "@styled-jsx/plugin-sass": "^4.0.2",
     "sass": "^1.49.8"
   }
 }

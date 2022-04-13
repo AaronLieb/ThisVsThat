@@ -1,4 +1,4 @@
-import Header_v2 from "../shared/Header_v2";
+import Header_v2 from "../shared/Header";
 import VotingBox from "./VotingBox";
 import classes from "./VotingLayout.module.css";
 

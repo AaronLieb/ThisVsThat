@@ -1,13 +1,11 @@
-import Header_v2 from "../components/shared/Header_v2";
+import Header from "../components/shared/Header";
 import UploadLayout from "../components/upload/UploadLayout";
 
 export default function upload() {
-
-    return (
-        <div>
-            <Header_v2 />
-            <UploadLayout />
-        </div>
-    ) 
+  return (
+    <div>
+      <Header />
+      <UploadLayout />
+    </div>
+  );
 }
-

@@ -10,7 +10,6 @@ export default function Home() {
         <title>This vs That</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <main>
         <Title />
         <Button>Create a ranking</Button>

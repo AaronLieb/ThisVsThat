@@ -7,7 +7,7 @@
     margin-top: 8rem;
 }
 
-.voting_boxes {
+._boxes {
     display: flex;
     justify-content: center;
     justify-content: space-evenly;

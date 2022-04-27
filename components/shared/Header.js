@@ -1,19 +1,10 @@
-import Button from "./Button.js";
+import styles from "./Header.module.scss";
 
 export default function Header() {
   return (
-    <div>
-      <Button color="blue" size="15">
-        Login / Register
-      </Button>
-      <style jsx>{`
-        div {
-          width: 100%;
-          display: flex;
-          justify-content: right;
-          min-width: 100%;
-        }
-      `}</style>
+    <div className={styles.container}>
+      <img className={styles.logo} src="/logo.png" alt="logo" />
+      <h1 className={styles.Title}>This vs That</h1>
     </div>
   );
 }

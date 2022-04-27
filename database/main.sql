@@ -13,7 +13,8 @@ CREATE TABLE Choice (
 	id INTEGER,
 	ranking VARCHAR(8),
     text VARCHAR ,
-	votes INT,
+	matchupsWon INT,
+	matchups INT,
 	PRIMARY KEY(id)
 );
 

@@ -1,25 +1,5 @@
-import { white } from "/styles/colors.js";
+import styles from "./Panel.module.css";
 
 export default function Panel({ children }) {
-  return (
-    <div>
-      {children}
-
-      {/* <style jsx>{`
-        @mixin color($baseColor) {
-          background-color: $baseColor;
-          box-shadow: 0px 6px 1px desaturate(darken($baseColor, 30%), 30%);
-        }
-
-        .container {
-          @include color(${white});
-          padding: 100px;
-          border: 2px solid #aaa;
-          border-radius: 20px;
-          display: flex;
-          flex-direction: column;
-        }
-      `}</style> */}
-    </div>
-  );
+  return <div className={styles.container}>{children}</div>;
 }

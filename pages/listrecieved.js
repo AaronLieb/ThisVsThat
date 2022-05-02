@@ -1,5 +1,4 @@
 import Header from "../components/shared/Header";
-import FinishedLayout from "../components/finishedranking/FinishedLayout";
 import Title from "../components/shared/Title";
 import Button from "../components/shared/Button";
 import styles from "../styles/single_button_page.module.scss";

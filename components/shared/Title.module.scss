@@ -1,0 +1,21 @@
+.title {
+    text-align: center;
+    font-family: "Poppins";
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-size: 4rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .title {
+        text-align: center;
+        font-family: "Poppins";
+        font-weight: 600;
+        letter-spacing: 0em;
+        font-size: 2.5rem;
+        margin-top: 8rem;
+    }
+
+  }

@@ -1,8 +1,11 @@
-import classes from './Result.module.css';
+import styles from './Result.module.scss';
 
-export default function Result(){
+export default function Result(props){
     return(
-        <div className={classes.container} >
+        <div className={styles.container} >
+            <p className={styles.p}>
+                {props.text}
+            </p>
         </div>
     )
 }

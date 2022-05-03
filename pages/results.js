@@ -1,7 +1,8 @@
 import ResultsLayout from "../components/results/ResultsLayout";
 import Header from "../components/shared/Header";
 import styles from "../styles/results.module.scss";
-import Result from "../components/results/Result"
+import Result from "../components/results/Result";
+import Button from "../components/shared/Button";
 
 
 export default function Results() {
@@ -18,6 +19,9 @@ export default function Results() {
             <h1 className={styles.h1}>Your rankings:</h1>
             <div className={styles.rankings_container}>
                 {itemList}
+            </div>
+            <div className={styles.footer}>
+            <Button className={styles.ranking_button} color="blue">Create a new ranking</Button>
             </div>
         </div>
     )

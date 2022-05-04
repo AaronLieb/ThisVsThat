@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS Choice;
 CREATE TABLE Choice (
 	id INTEGER,
 	ranking VARCHAR(8),
-    text VARCHAR ,
+  text VARCHAR,
 	matchupsWon INT,
 	matchups INT,
 	PRIMARY KEY(id)

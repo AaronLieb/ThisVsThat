@@ -1,4 +1,4 @@
-import { query, queryAll } from "../../../helpers/db";
+import { query } from "../../../helpers/db";
 import { Database } from "sqlite3";
 
 const randInt = (min, max) => Math.floor(Math.random() * (max - min) + min);

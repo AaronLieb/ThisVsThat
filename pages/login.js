@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Header, Button } from "/components/shared/Button.js";
-import styles from "/styles/panel.module.scss";
+import styles from "/components/shared/Panel.module.scss";
 export default function Login() {
   return (
     <div>

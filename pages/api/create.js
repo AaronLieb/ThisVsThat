@@ -21,12 +21,8 @@ const db = new Database("./database/main.db");
 
 // Handler function, called when the endpoint is hit
 async function handler(req, res) {
+
   if (req.method !== "POST") return res.status(405); // 405 Method not allowed
-  try {
-    req.body = JSON.parse(JSON.stringify(req.body));
-  } catch (err) {
-    return res.status(400).json({ msg: `Malformed JSON: ${err}` }); // 400 Bad Request
-  }
   if (!req.body.name) return res.status(400).json({ msg: "Missing Ranking Name" }); // 400 Bad Request
   if (!req.body.choices?.length)
     return res.status(400).json({ msg: "Missing Ranking Choices" }); // 400 Bad Request

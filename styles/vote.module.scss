@@ -1,0 +1,28 @@
+.container {
+  background-color: white;
+  height: 100%;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0em;
+  font-size: 4rem;
+  padding-top: 8rem;
+  margin: 0;
+}
+
+.voting_boxes {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 3rem;
+  height: 100%;
+  margin: 0;
+}
+
+
+.page {
+  background-color: white;
+  height: 100vh;
+}

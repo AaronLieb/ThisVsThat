@@ -21,6 +21,10 @@
   text-align: center;
   justify-content: center;
   user-select: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @include buttonHoverAndClick(#e8e8e8);
 }
 

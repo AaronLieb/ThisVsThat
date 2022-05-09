@@ -1,0 +1,31 @@
+.container {
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px 0px #00000040;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  width: 40%;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    transform: scale(1.1);
+  }
+  cursor: pointer;
+}
+
+.red {
+  @extend .container;
+  background-color: #ff7b7b;
+}
+
+.blue {
+  @extend .container;
+  background-color: #78aeff;
+}
+
+.text {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  user-select: none;
+}

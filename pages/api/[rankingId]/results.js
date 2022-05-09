@@ -10,7 +10,9 @@ async function handler(req, res) {
 
   const choices = await query(db, "SELECT * FROM Choice WHERE ranking = ?", rankingId);
 
-  let result = choices.map((choice) => {
+  const name = (await query(db, "SELECT name FROM Ranking WHERE id = ?", rankingId))[0].name;
+
+  let results = choices.map((choice) => {
     let winPercent = choice.matchupsWon / choice.matchups || 0;
     return {
       id: choice.id,
@@ -21,7 +23,7 @@ async function handler(req, res) {
     };
   });
 
-  res.status(200).json(result);
+  res.status(200).json({name: name, results: results});
 }
 
 export default handler;

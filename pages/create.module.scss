@@ -3,7 +3,20 @@
 }
 
 .file {
-  z-index: -1;
+  position: relative;
+}
+
+.file > ::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.file > input {
+  width: 6em;
+  height: 3em;
+  background-image: url("../public/downloadpicture.png");
+  background-size: 2em;
+  background-repeat: no-repeat;
+  background-position: 59px 15px;
 }
 
 .choices {

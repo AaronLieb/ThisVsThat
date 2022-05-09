@@ -11,9 +11,10 @@ const loading = [
   { text: loadingText, id: -1 },
 ];
 
-export default function vote() {
+function vote() {
   const router = useRouter();
 
+  const [name, setName] = useState(loadingText);
   const [choices, setChoices] = useState(loading);
   const [prev, setPrev] = useState([]);
 
@@ -30,11 +31,12 @@ export default function vote() {
       .then((res) => res.json())
       .then((data) => {
         if (data.outOfChoices) {
-          router.push(`/${router.query.rankingId}/finished`)
-          setChoices(loading)
+          router.push(`/${router.query.rankingId}/finished`);
+          setChoices(loading);
           return;
         }
         setChoices(data.choices);
+        setName(data.name);
         setPrev(prev.concat([[data.choices[0].id, data.choices[1].id]]));
       });
   };
@@ -54,7 +56,6 @@ export default function vote() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         updateChoices();
       });
   };
@@ -68,7 +69,7 @@ export default function vote() {
     <div>
       <Header />
       <div className={page.content}>
-        <h1 className={styles.title}>Which is better?</h1>
+        <h1 className={styles.title}>{name}</h1>
         <div className={styles.voting_boxes}>
           <VotingBox
             onClick={() => {
@@ -93,3 +94,5 @@ export default function vote() {
     </div>
   );
 }
+
+export default vote;

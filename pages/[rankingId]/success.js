@@ -4,6 +4,7 @@ import Button from "../../components/shared/Button";
 import styles from "../../styles/page.module.scss";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function success() {
   const router = useRouter();
@@ -20,12 +21,18 @@ export default function success() {
         <h2>Link to vote:</h2>
         <h4>{`${url}/${router.query.rankingId}/vote`}</h4>
 
-        <Button href={`/${router.query.rankingId}/vote`} className={styles.button} color="blue">
-          Vote Now
-        </Button>
-        <Button href={`/${router.query.rankingId}/results`} className={styles.button} color="red">
-          View Results
-        </Button>
+        <Link href={`/${router.query.rankingId}/vote`}>
+          <Button className={styles.button} color="red">
+            Vote Now
+          </Button>
+        </Link>
+
+        <Link href={`/${router.query.rankingId}/results`}>
+          <Button className={styles.button} color="blue">
+            View Results
+          </Button>
+        </Link>
+
       </div>
     </div>
   );

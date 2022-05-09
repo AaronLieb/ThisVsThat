@@ -15,20 +15,18 @@ export default function create() {
 
   const router = useRouter();
 
-
   useEffect(() => {
     setFileReader(new FileReader());
-  }, [])
+  }, []);
 
   const uploadCSV = (e) => {
     fileReader.readAsText(e.target.files[0]);
 
     fileReader.onload = function (event) {
-      console.log(event.target.result)
+      console.log(event.target.result);
       setChoices(event.target.result);
     };
   };
-
 
   const updateName = (e) => {
     setName(e.target.value);
@@ -38,20 +36,20 @@ export default function create() {
     setChoices(e.target.value);
   };
 
-   const submitRanking = () => {
-     fetch("/api/create", {
-       method: "POST",
-       headers: {
-         "Content-Type": "application/json",
-       },
-       body: JSON.stringify({
-         name: name,
-         choices: choices.replace(/\s+/g, "").split(","),
-       }),
-     })
-       .then((res) => res.json())
-       .then((data) => router.push(`${data.rankingId}/success`));
-   };
+  const submitRanking = () => {
+    fetch("/api/create", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: name,
+        choices: choices.replace(/\s+/g, "").split(","),
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => router.push(`${data.rankingId}/success`));
+  };
 
   return (
     <div>
@@ -76,12 +74,18 @@ export default function create() {
           </div>
           <div>
             <h3> upload a CSV file</h3>
-              <div>
-                <input className={`${buttonStyles.button} ${styles.file}`} type={"file"} id={"csvFileInput"} accept={".csv"} onChange={uploadCSV} />
-              </div>
+            <div className={styles.file}>
+              <input
+                className={`${buttonStyles.button} ${buttonStyles.red}`}
+                type={"file"}
+                id={"csvFileInput"}
+                accept={".csv"}
+                onChange={uploadCSV}
+              />
+            </div>
           </div>
         </div>
-        <Button size="20" onClick={submitRanking}>
+        <Button size="20" onClick={submitRanking} color="blue">
           Create
         </Button>
       </div>

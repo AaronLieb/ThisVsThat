@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Button from "/components/shared/Button.js";
-import Header from "/components/shared/Header.js";
 import Title from "/components/index/Title.js";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
@@ -12,7 +13,10 @@ export default function Home() {
       </Head>
       <main>
         <Title />
-        <Button href="/create/">Create a ranking</Button>
+
+        <Link href="/create/">
+          <Button>Create a ranking</Button>
+        </Link>  
       </main>
 
       <style jsx>{`

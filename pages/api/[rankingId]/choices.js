@@ -2,7 +2,7 @@ import { query } from "../../../helpers/db";
 import { Database } from "sqlite3";
 
 const containsPerm = (src, check) => {
-  console.log(src, check)
+  console.log(src, check);
   for (let pair of src) {
     if ((pair[0] == check[0] && pair[1] == check[1]) || (pair[0] == check[1] && pair[1] == check[0])) return true;
   }
@@ -23,10 +23,11 @@ async function handler(req, res) {
 
   const choices = await query(db, "SELECT * FROM Choice WHERE ranking = ?", rankingId);
 
+  const name = (await query(db, "SELECT name FROM Ranking WHERE id = ?", rankingId))[0].name;
+
   if (!choices || choices.length <= 1) return res.status(400).json({ msg: "Not enough choices" });
 
-
-  const numPermutations = (choices.length * (choices.length - 1))/2;
+  const numPermutations = (choices.length * (choices.length - 1)) / 2;
   const outOfChoices = req.body.prev.length == numPermutations;
 
   let c1, c2;
@@ -38,7 +39,10 @@ async function handler(req, res) {
     }
   }
 
+  console.log(name);
+
   const result = {
+    name: name,
     outOfChoices: outOfChoices,
     choices: outOfChoices ? [] : [choices[c1], choices[c2]],
   };

@@ -1,7 +1,6 @@
 import styles from "./BigInput.module.scss";
 
 export default function ({ className, type, children, onChange, value }) {
-  console.log(value)
   if (type == "input") {
     return (
       <input
@@ -13,6 +12,13 @@ export default function ({ className, type, children, onChange, value }) {
       ></input>
     );
   } else {
-    return <textarea value={value} onChange={onChange} placeholder={children} className={`${styles.input} ${className}`}></textarea>;
+    return (
+      <textarea
+        value={value}
+        onChange={onChange}
+        placeholder={children}
+        className={`${styles.input} ${className}`}
+      ></textarea>
+    );
   }
 }

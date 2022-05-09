@@ -1,0 +1,32 @@
+.link {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px #ccc solid;
+  background-color: #ddd;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    border-color: rgb(132, 149, 196);
+    background-color: #cdf4ff;
+  }
+  &:active {
+    border-color: rgb(95, 111, 152);
+    background-color: #92e7ff;
+  }
+}
+
+
+.clicked::after {
+  transition: all 0.1s ease-in-out;
+  content: "Copied!";
+  position: relative;
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  top: -25px;
+  left: 25px;
+  transform: rotate(8deg);
+}
+
+.clicked::before {
+  content: "Copied!";
+  color: rgba(0, 0, 0, 0);
+}

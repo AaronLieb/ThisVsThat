@@ -44,7 +44,9 @@ export default function create() {
       },
       body: JSON.stringify({
         name: name,
-        choices: choices.replace(/\s+/g, "").split(","),
+        choices: choices.split(',')
+          .map(c => c.replace(/^\s+|\s+$/g, ''))
+          .filter(c => c.length > 0)
       }),
     })
       .then((res) => res.json())
@@ -57,10 +59,10 @@ export default function create() {
       <div className={singlepage.content}>
         <Title className={singlepage.title}> Create a Ranking </Title>
         <div>
-          <h2> Ranking Name: </h2>
+          <h2> Ask a question: </h2>
           {/* <input onChange={nameUpdate} placeholder="Favorite Fruit" type="text"></input> */}
           <BigInput value={name} onChange={updateName} type="input" className={styles.name}>
-            Favorite Fruit
+            Which fruit is better?
           </BigInput>
         </div>
         <div className={singlepage.split}>

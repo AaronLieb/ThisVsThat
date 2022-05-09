@@ -4,6 +4,8 @@ import styles from "../../styles/vote.module.scss";
 import page from "../../styles/page.module.scss";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import Button from "../../components/shared/Button";
 
 const loadingText = "Loading...";
 const loading = [
@@ -89,6 +91,13 @@ function vote() {
             {" "}
             {choices[1].text}{" "}
           </VotingBox>
+        </div>
+        <div className={styles.viewResults}>
+          <Link size="25" href={`/${router.query.rankingId}/results`}>
+            <Button className={page.button}>
+              View Results
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

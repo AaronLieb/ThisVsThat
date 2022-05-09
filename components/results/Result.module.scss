@@ -11,11 +11,12 @@
 
 .row > div {
   background-color: #ff7b7b;
-  width: 29.25rem;
-  height: 5.625rem;
+  width: 29.25em;
+  min-height: 5em;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-evenly;
 }
@@ -24,7 +25,7 @@
   color: white;
   text-align: center;
   font-size: 1rem;
-  line-height: 5.625rem;
+  padding: 10px 0;
 }
 
 .row > div > p:nth-child(1) {
